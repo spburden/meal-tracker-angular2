@@ -7,15 +7,15 @@ import { Meal } from "./meal.model";
     <h3>Record a new Meal</h3>
     <div class="form-group">
       <label>Food: </label>
-      <input class="form-control" #newFood>
+      <input class="form-control" type="text" #newFood>
     </div>
     <div class="form-group">
       <label>Description: </label>
-      <input class="form-control" #newDesc>
+      <input class="form-control" type="text" #newDesc>
     </div>
     <div class="form-group">
       <label>Calories: </label>
-      <input class="form-control" #newCal>
+      <input class="form-control" type="number" #newCal>
     </div>
     <div>
       <button class="btn btn-success" (click)="

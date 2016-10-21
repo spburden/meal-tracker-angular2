@@ -6,15 +6,19 @@ import { Meal } from "./meal.model";
   template: `
   <div class="container">
     <h1>Meal Tracker</h1>
-    <div>
       <meal-list
         [childMealList] = "masterMealList"
         (showEditFormSender) = "showEditForm($event)"
       ></meal-list>
+      <edit-meal
+        [childSelectedMeal] = "selectedMeal"
+        (finishedEditingSender) = "finishedEditing()"
+        (deleteMealSender) = "deleteMeal()"
+      ></edit-meal>
       <new-meal
         (newMealSender)="addMeal($event)"
       ></new-meal>
-    </div>
+      <button (click)="add()" class="btn">Add</button>
   </div>
   `
 })
@@ -25,7 +29,10 @@ export class AppComponent {
       new Meal("Chicken Caesar Salad", "Very good", 400)
   ];
 
-  showList = true;
+  // showMealList = true;
+  // showAddForm = true;
+  // addEditForm = true;
+
   selectedMeal: Meal = null;
 
   addMeal(newMealFromChild: Meal) {
@@ -36,6 +43,20 @@ export class AppComponent {
 
   showEditForm(editMeal: Meal) {
     this.selectedMeal = editMeal;
-    this.showList = false;
+  }
+
+  add() {
+  //   // this.showList = false;
+  //   // this.showEdit = false;
+  //   // this.showNew = true;
+  }
+
+  finishedEditing() {
+    this.selectedMeal = null;
+  }
+
+  deleteMeal() {
+    var indexPosition = this.masterMealList.indexOf(this.selectedMeal);
+    this.masterMealList.splice((indexPosition), 1);
   }
 }

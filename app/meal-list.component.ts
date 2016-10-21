@@ -6,10 +6,12 @@ import { Meal } from "./meal.model";
   template: `
     <h3>Meals Today:<h3>
     <div *ngFor="let currentMeal of childMealList">
-      <h4>{{ currentMeal.food }}</h4>
-      <h4>{{ currentMeal.description }}</h4>
-      <h4>{{ currentMeal.calories }} Calories</h4>
-      <button class="btn btn-primary" (click)="editClicked(currentMeal)">Edit</button>
+      <div class="well">
+        <h4>Food: {{ currentMeal.food }}</h4>
+        <h4>Description: {{ currentMeal.description }}</h4>
+        <h4>{{ currentMeal.calories }} Calories</h4>
+        <button class="btn btn-primary" (click)="editClicked(currentMeal)">Edit</button>
+      </div>
     </div>
   `
 })
@@ -17,6 +19,7 @@ import { Meal } from "./meal.model";
 export class MealListComponent {
   @Input() childMealList: Meal[];
   @Output() showEditFormSender = new EventEmitter();
+  @Output() showAddFormSender = new EventEmitter();
   editClicked(mealToEdit: Meal) {
     this.showEditFormSender.emit(mealToEdit);
   }

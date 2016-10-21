@@ -1,7 +1,7 @@
 export class Meal {
-  public name;
+  public food;
   public description;
   public calories;
 
-  constructor(name: string, description: string, calories: number) { }
+  constructor(food: string, description: string, calories: number) { }
 }

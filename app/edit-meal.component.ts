@@ -26,8 +26,8 @@ import { Meal } from "./meal.model";
 
 export class EditMealComponent {
   @Input() childSelectedMeal: Meal;
-  @Output () finishedEditingSender = new EventEmitter();
-  @Output () deleteMealSender = new EventEmitter();
+  @Output() finishedEditingSender = new EventEmitter();
+  @Output() deleteMealSender = new EventEmitter();
   finishedEditing() {
     this.finishedEditingSender.emit();
   }

@@ -5,20 +5,26 @@ import { Meal } from "./meal.model";
   selector: "my-app",
   template: `
   <div class="container">
-    <h1>Meal Tracker</h1>
-      <meal-list
-        [childMealList] = "masterMealList"
-        (showEditFormSender) = "showEditForm($event)"
-      ></meal-list>
+    <div [hidden] = "!showMealList">
+      <h1>Meal Tracker</h1>
+        <meal-list
+          [childMealList] = "masterMealList"
+          (showEditFormSender) = "editForm($event)"
+        ></meal-list>
+        <button (click)="addForm()" class="btn">Add Meal</button>
+    </div>
+    <div [hidden] = "!showEditForm">
       <edit-meal
         [childSelectedMeal] = "selectedMeal"
         (finishedEditingSender) = "finishedEditing()"
         (deleteMealSender) = "deleteMeal()"
       ></edit-meal>
+    </div>
+    <div [hidden] = "!showAddForm">
       <new-meal
         (newMealSender)="addMeal($event)"
       ></new-meal>
-      <button (click)="add()" class="btn">Add</button>
+    </div>
   </div>
   `
 })
@@ -29,34 +35,42 @@ export class AppComponent {
       new Meal("Chicken Caesar Salad", "Very good", 400)
   ];
 
-  // showMealList = true;
-  // showAddForm = true;
-  // addEditForm = true;
+  showMealList = true;
+  showAddForm = false;
+  showEditForm = false;
 
   selectedMeal: Meal = null;
 
   addMeal(newMealFromChild: Meal) {
-    console.log(newMealFromChild);
     this.masterMealList.push(newMealFromChild);
-    console.log(this.masterMealList);
+    this.showMealList = true;
+    this.showAddForm = false;
   }
 
-  showEditForm(editMeal: Meal) {
-    this.selectedMeal = editMeal;
+  addForm() {
+    this.showMealList = false;
+    this.showAddForm = true;
   }
 
-  add() {
-  //   // this.showList = false;
-  //   // this.showEdit = false;
-  //   // this.showNew = true;
+  editForm(clickedMeal: Meal) {
+    this.selectedMeal = clickedMeal;
+    this.showMealList = false;
+    this.showAddForm = false;
+    this.showEditForm = true;
   }
 
   finishedEditing() {
     this.selectedMeal = null;
+    this.showMealList = true;
+    this.showAddForm = false;
+    this.showEditForm = false;
   }
 
   deleteMeal() {
     var indexPosition = this.masterMealList.indexOf(this.selectedMeal);
     this.masterMealList.splice((indexPosition), 1);
+    this.showMealList = true;
+    this.showAddForm = false;
+    this.showEditForm = false;
   }
 }

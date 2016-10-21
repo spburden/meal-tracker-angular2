@@ -1,8 +1,8 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-import { Meal } from './meal.model';
+import { Component, Output, EventEmitter } from "@angular/core";
+import { Meal } from "./meal.model";
 
 @Component({
-  selector: 'new-meal',
+  selector: "new-meal",
   template: `
     <h3>Record a new Meal</h3>
     <div class="form-group">
@@ -30,7 +30,7 @@ import { Meal } from './meal.model';
 
 export class NewMealComponent {
   @Output() newMealSender = new EventEmitter();
-  addClicked(food: string, description: string, calories: number){
+  addClicked(food: string, description: string, calories: number) {
     var newMealToAdd: Meal = new Meal(food, description, calories);
     this.newMealSender.emit(newMealToAdd);
   }

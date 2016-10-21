@@ -1,0 +1,17 @@
+{
+  "name": "meal-tracker",
+  "authors": [
+    "Stephen Burden <spburden@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -38,7 +38,6 @@ export class AppComponent {
   showMealList = true;
   showAddForm = false;
   showEditForm = false;
-
   selectedMeal: Meal = null;
 
   addMeal(newMealFromChild: Meal) {

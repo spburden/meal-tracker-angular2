@@ -16,7 +16,7 @@
 ## Setup/Installation Requirements
 * _Clone the repository from the link below to your computer_
 * _From the project directory enter the following commands in Terminal to install the required dependencies by entering: `npm install`, followed by: `bower install`_
-* _To view webpage in you default browser: from the project directory enter the command: `gulp serve`_
+* _To view webpage in your default browser: from the project directory enter the command: `gulp serve`_
 
 ## Link
 https://github.com/spburden/meal-tracker-angular2

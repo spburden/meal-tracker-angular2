@@ -30,7 +30,6 @@ export class MealListComponent {
     this.showEditFormSender.emit(mealToEdit);
   }
   public selectedCalories = "";
-
   onChangeCalories(optionFromMenu) {
     this.selectedCalories = optionFromMenu;
   }

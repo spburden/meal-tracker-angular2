@@ -24,7 +24,7 @@ import { Meal } from "./meal.model";
         newDesc.value='';
         newCal.value='';
         ">Add</button>
-      <p id="hidden" style="display:none">Please fill in all fields</p>
+      <p id="validation" style="display:none">Please fill in all fields</p>
     </div>
   `
 })
@@ -32,12 +32,12 @@ import { Meal } from "./meal.model";
 export class NewMealComponent {
   @Output() newMealSender = new EventEmitter();
   addClicked(food: string, description: string, calories: number) {
-    if (food !== '' && description !== '' && calories > 0) {
-      document.getElementById("hidden").style.display = "none";
+    if (food !== "" && description !== "" && calories > 0) {
+      document.getElementById("validation").style.display = "none";
       var newMealToAdd: Meal = new Meal(food, description, calories);
       this.newMealSender.emit(newMealToAdd);
     } else {
-      document.getElementById("hidden").style.display = "inline";
+      document.getElementById("validation").style.display = "inline";
     }
   }
 }

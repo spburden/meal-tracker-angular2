@@ -1,3 +1,28 @@
-h1 {
-  color: blue;
+body {
+  font-family: 'Roboto Slab', serif;
+  background-color: black;
+  color: #01A3EC;
+}
+
+.jumbotron {
+    margin: 20px;
+    text-align: center;
+    background: url('https://static.pexels.com/photos/53217/tape-apple-glas-water-53217.jpeg') center 23% no-repeat;
+    background-size: cover;
+    height: 375px;
+}
+
+.title {
+    margin-top: 100px;
+    padding: 20px;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+.well {
+  height: 180px;
+}
+
+.btn {
+  margin-bottom: 30px;
 }

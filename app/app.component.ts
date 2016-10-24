@@ -6,12 +6,16 @@ import { Meal } from "./meal.model";
   template: `
   <div class="container">
     <div [hidden] = "!showMealList">
-      <h1>Meal Tracker</h1>
+      <div class="jumbotron">
+        <div class='title'>
+          <h1>Wecome to Meal Tracker</h1>
+        </div>
+      </div>
         <meal-list
           [childMealList] = "masterMealList"
           (showEditFormSender) = "editForm($event)"
         ></meal-list>
-        <button (click)="addForm()" class="btn">Add Meal</button>
+        <button (click)="addForm()" class="btn btn-danger">Add Meal</button>
     </div>
     <div [hidden] = "!showEditForm">
       <edit-meal

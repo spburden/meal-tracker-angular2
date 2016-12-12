@@ -26,7 +26,8 @@ import { Meal } from "./meal.model";
     </div>
     <div [hidden] = "!showAddForm">
       <new-meal
-        (newMealSender)="addMeal($event)"
+        (newMealSender) = "addMeal($event)"
+        (cancelSender) = "cancel()"
       ></new-meal>
     </div>
   </div>
@@ -64,6 +65,12 @@ export class AppComponent {
 
   finishedEditing() {
     this.selectedMeal = null;
+    this.showMealList = true;
+    this.showAddForm = false;
+    this.showEditForm = false;
+  }
+
+  cancel() {
     this.showMealList = true;
     this.showAddForm = false;
     this.showEditForm = false;

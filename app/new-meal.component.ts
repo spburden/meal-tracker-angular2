@@ -24,6 +24,7 @@ import { Meal } from "./meal.model";
         newDesc.value='';
         newCal.value='';
         ">Add</button>
+      <button class="btn btn-danger" (click)="cancel();">Cancel</button>
       <p id="validation" style="display:none">Please fill in all fields</p>
     </div>
   `
@@ -31,6 +32,10 @@ import { Meal } from "./meal.model";
 
 export class NewMealComponent {
   @Output() newMealSender = new EventEmitter();
+  @Output() cancelSender = new EventEmitter();
+  cancel () {
+    this.cancelSender.emit();
+  }
   addClicked(food: string, description: string, calories: number) {
     if (food !== "" && description !== "" && calories > 0) {
       document.getElementById("validation").style.display = "none";

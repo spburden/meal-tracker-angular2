@@ -4,6 +4,8 @@
 
 #### By _**Stephen Burden**_
 
+<img src="screenshot.png" alt="screenshot of site">
+
 ## Specifications
 | Behavior | Input Example | Output Example |
 | --- | --- | --- |

@@ -47,10 +47,6 @@
     "typescript": "^1.8.10",
   },
   "cacheDirectories": ["node_modules"],
-  "engines": {
-    "node": "6.7.0",
-    "npm": "3.10.9"
-  },
   "main": "gulpfile.js",
   "author": "",
   "description": ""

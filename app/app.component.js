@@ -54,14 +54,14 @@ var AppComponent = (function () {
         this.showAddForm = false;
         this.showEditForm = false;
     };
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: "my-app",
+            template: "\n  <div class=\"container\">\n    <div [hidden] = \"!showMealList\">\n      <div class=\"jumbotron\">\n        <div class='title'>\n          <h1>Wecome to Meal Tracker</h1>\n        </div>\n      </div>\n        <meal-list\n          [childMealList] = \"masterMealList\"\n          (showEditFormSender) = \"editForm($event)\"\n        ></meal-list>\n        <button (click)=\"addForm()\" class=\"btn btn-danger\">Add Meal</button>\n    </div>\n    <div [hidden] = \"!showEditForm\">\n      <edit-meal\n        [childSelectedMeal] = \"selectedMeal\"\n        (finishedEditingSender) = \"finishedEditing()\"\n        (deleteMealSender) = \"deleteMeal()\"\n      ></edit-meal>\n    </div>\n    <div [hidden] = \"!showAddForm\">\n      <new-meal\n        (newMealSender) = \"addMeal($event)\"\n        (cancelSender) = \"cancel()\"\n      ></new-meal>\n    </div>\n  </div>\n  "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: "my-app",
-        template: "\n  <div class=\"container\">\n    <div [hidden] = \"!showMealList\">\n      <div class=\"jumbotron\">\n        <div class='title'>\n          <h1>Wecome to Meal Tracker</h1>\n        </div>\n      </div>\n        <meal-list\n          [childMealList] = \"masterMealList\"\n          (showEditFormSender) = \"editForm($event)\"\n        ></meal-list>\n        <button (click)=\"addForm()\" class=\"btn btn-danger\">Add Meal</button>\n    </div>\n    <div [hidden] = \"!showEditForm\">\n      <edit-meal\n        [childSelectedMeal] = \"selectedMeal\"\n        (finishedEditingSender) = \"finishedEditing()\"\n        (deleteMealSender) = \"deleteMeal()\"\n      ></edit-meal>\n    </div>\n    <div [hidden] = \"!showAddForm\">\n      <new-meal\n        (newMealSender) = \"addMeal($event)\"\n        (cancelSender) = \"cancel()\"\n      ></new-meal>\n    </div>\n  </div>\n  "
-    }),
-    __metadata("design:paramtypes", [])
-], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

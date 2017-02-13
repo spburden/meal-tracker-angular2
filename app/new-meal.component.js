@@ -28,22 +28,22 @@ var NewMealComponent = (function () {
             document.getElementById("validation").style.display = "inline";
         }
     };
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], NewMealComponent.prototype, "newMealSender", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], NewMealComponent.prototype, "cancelSender", void 0);
+    NewMealComponent = __decorate([
+        core_1.Component({
+            selector: "new-meal",
+            template: "\n    <h3>Record a new Meal</h3>\n    <div class=\"form-group\">\n      <label>Food: </label>\n      <input required class=\"form-control\" type=\"text\" #newFood>\n    </div>\n    <div class=\"form-group\">\n      <label>Description: </label>\n      <input required class=\"form-control\" type=\"text\" #newDesc>\n    </div>\n    <div class=\"form-group\">\n      <label>Calories: </label>\n      <input required class=\"form-control\" type=\"number\" #newCal>\n    </div>\n    <div>\n      <button class=\"btn btn-success\" (click)=\"\n        addClicked(newFood.value, newDesc.value, newCal.value);\n        newFood.value='';\n        newDesc.value='';\n        newCal.value='';\n        \">Add</button>\n      <button class=\"btn btn-danger\" (click)=\"cancel();\">Cancel</button>\n      <p id=\"validation\" style=\"display:none\">Please fill in all fields</p>\n    </div>\n  "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], NewMealComponent);
     return NewMealComponent;
 }());
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], NewMealComponent.prototype, "newMealSender", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], NewMealComponent.prototype, "cancelSender", void 0);
-NewMealComponent = __decorate([
-    core_1.Component({
-        selector: "new-meal",
-        template: "\n    <h3>Record a new Meal</h3>\n    <div class=\"form-group\">\n      <label>Food: </label>\n      <input required class=\"form-control\" type=\"text\" #newFood>\n    </div>\n    <div class=\"form-group\">\n      <label>Description: </label>\n      <input required class=\"form-control\" type=\"text\" #newDesc>\n    </div>\n    <div class=\"form-group\">\n      <label>Calories: </label>\n      <input required class=\"form-control\" type=\"number\" #newCal>\n    </div>\n    <div>\n      <button class=\"btn btn-success\" (click)=\"\n        addClicked(newFood.value, newDesc.value, newCal.value);\n        newFood.value='';\n        newDesc.value='';\n        newCal.value='';\n        \">Add</button>\n      <button class=\"btn btn-danger\" (click)=\"cancel();\">Cancel</button>\n      <p id=\"validation\" style=\"display:none\">Please fill in all fields</p>\n    </div>\n  "
-    }),
-    __metadata("design:paramtypes", [])
-], NewMealComponent);
 exports.NewMealComponent = NewMealComponent;
 //# sourceMappingURL=new-meal.component.js.map

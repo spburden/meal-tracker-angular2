@@ -44,7 +44,7 @@
     "gulp-util": "^3.0.7",
     "concurrently": "^2.2.0",
     "lite-server": "^2.2.2",
-    "typescript": "^1.8.10",
+    "typescript": "^1.8.10"
   },
   "cacheDirectories": ["node_modules"],
   "main": "gulpfile.js",

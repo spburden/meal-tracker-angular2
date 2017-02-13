@@ -4,6 +4,8 @@
 
 #### By _**Stephen Burden**_
 
+[Click here to view](https://meal-tracker-angular2.herokuapp.com/)
+
 <img src="screenshot.png" alt="screenshot of site">
 
 ## Specifications

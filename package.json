@@ -2,13 +2,8 @@
   "name": "meal-tracker",
   "version": "1.0.0",
   "scripts": {
-    "start": "node server.js && tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "lite": "lite-server",
     "test": "grunt test",
-    "postinstall": "typings install && bower install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings"
+    "postinstall": "bower install"
   },
   "license": "ISC",
   "dependencies": {

@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "preinstall": "npm i typings -g",
     "lite": "lite-server",
     "test": "grunt test",
-    "postinstall": "typings install && bower install",
+    "postinstall": "npm run typings install && bower install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings"

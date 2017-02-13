@@ -5,7 +5,6 @@
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
     "test": "grunt test",
-    "postinstall": "bower install",
     "tsc": "tsc",
     "tsc:w": "tsc -w"
   },
